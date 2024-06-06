@@ -1,0 +1,47 @@
+program DrawCat;
+
+uses GraphABC;
+
+procedure DrawCat;
+begin
+  // Тело кота
+  SetBrushColor(clGray);
+  Rectangle(100, 200, 300, 400);
+  
+  // Голова кота
+  SetBrushColor(clGray);
+  Rectangle(150, 100, 250, 200);
+  
+  // Уши кота
+  SetBrushColor(clGray);
+  Polygon([(150, 100), (170, 50), (190, 100)]);
+  Polygon([(250, 100), (230, 50), (210, 100)]);
+  
+  // Глаза кота
+  SetBrushColor(clWhite);
+  Circle(180, 150, 10);
+  Circle(220, 150, 10);
+  
+  // Зрачки кота
+  SetBrushColor(clBlack);
+  Circle(180, 150, 5);
+  Circle(220, 150, 5);
+  
+  // Ноги кота
+  SetBrushColor(clGray);
+  Rectangle(120, 400, 160, 450);
+  Rectangle(240, 400, 280, 450);
+  
+  // Хвост кота
+  SetBrushColor(clGray);
+  Rectangle(300, 300, 350, 320);
+end;
+
+begin
+  // Устанавливаем размер окна
+  SetWindowSize(500, 500);
+  ClearWindow(clWhite);
+  
+  // Рисуем кота
+  DrawCat;
+end.
